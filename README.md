@@ -5,8 +5,8 @@
 
 ## Contributors
 
-- **Team Members:** [Mohammed Jawwadul Islam](https://www.linkedin.com/in/jawwadfida/), [Mohammad Fahad Al Rafi](https://www.linkedin.com/in/md-fahad-al-al-rafi-14b968111/), [Moumy Kabir](https://www.linkedin.com/in/pranto-podder-b78b97162/), [Pranto Podder](https://www.linkedin.com/in/aysha-siddika-577ba5224/), [Aysha Siddika](https://www.linkedin.com/in/moumy-kabir-156a0a232/), Nafisa Akhter
-- **Project Duration:** August 2022 - September 2022
+- **Team Members:** [Bless Junior](https://tientcheujunior83@gmail.com)
+- **Project Duration:** March 2025 - June 2025
 
 ## Tools used:
       1) Programming Language and Libraries: Django (Python web framework), Bootstrap, JavaScript, Ajax, Django REST framework.
@@ -20,7 +20,7 @@
 ### Patient
       1)  Search multiple Hospital → Department List → Search for Doctors
       2)  Doctor Profile → Book Appointment
-      3)  Pay Appointment + Mail Confirmation 
+      3)  Pay Appointment + Mail Confirmation
       4)  Search all Doctors in all hospitals
       5)  Chat with appointed Doctor
       6)  View Prescription, Download Prescription (PDF)
@@ -30,7 +30,7 @@
       10) Search for Medicines in Medical Shop (Pharmacy)
       11) Select which medicines to purchase (Cart system), pay total amount for medicines (payment + mail confirmation)
       
-### Doctor 
+### Doctor
       1)  Doctor Profile Settings (Add More feature)
       2)  Search multiple Hospital → Doctor register to hospital + upload certificate
       3)  (Once registered by admin) accept or reject patients appointment (mail confirmation send to patient)
@@ -68,11 +68,11 @@
 #### [xhtml2pdf](https://xhtml2pdf.readthedocs.io/en/latest/usage.html) - to generate and download pdf documents.
 
 ## Installation Details
-      1) Create an environment to run django project  
-      2) Migrate to create dbsqlite database 
+      1) Create an environment to run django project
+      2) Migrate to create dbsqlite database
       3) Look for .env.example and settings.py files to see what credentials to set up, and then create .env files
       
-      The credentials that you need to set up are: Mailtrap credentials, SSLCommerz Credentials. 
+      The credentials that you need to set up are: Mailtrap credentials, SSLCommerz Credentials.
 
 ## Steps to start the app
       1) Start python virtual env
@@ -85,7 +85,7 @@
             cp .env.example .env
       5) Upgrade django framework
             pip install --upgrade djangorestframework-simplejwt
-      6) Migrate DB 
+      6) Migrate DB
             python manage.py migrate
       7) Start the application
             python manage.py runserver
