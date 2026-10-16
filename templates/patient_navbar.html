@@ -1,70 +1,74 @@
 {% load static %}
 
-<nav class="navbar navbar-expand-lg header-nav">
-  <div class="navbar-header">
-    <a id="mobile_btn" href="javascript:void(0);">
-      <span class="bar-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span>
-    </a>
-    <a href="{% url 'hospital_home'%}" class="navbar-brand logo">
-      <img
-        src="{% static 'HealthStack-System/images/Normal/logo.jpg' %}"
-        class="img-fluid"
-        alt="Logo"
-      />
-    </a>
-  </div>
-  <div class="main-menu-wrapper">
-    <div class="menu-header">
-      <a href="" class="menu-logo">
+<nav class="navbar navbar-expand-lg header-nav glass-nav hs-p-md">
+  <div class="container-fluid">
+    <div class="navbar-header d-flex align-items-center">
+      <a id="mobile_btn" href="javascript:void(0);" class="ms-2">
+        <span class="bar-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
+      <a href="{% url 'hospital_home'%}" class="navbar-brand logo d-flex align-items-center">
         <img
           src="{% static 'HealthStack-System/images/Normal/logo.jpg' %}"
           class="img-fluid"
           alt="Logo"
+          style="max-height: 40px;"
         />
-      </a>
-      <a id="menu_close" class="menu-close" href="javascript:void(0);">
-        <i class="fas fa-times"></i>
+        <span class="brand-text ms-2">HealthStack</span>
       </a>
     </div>
-    <ul class="main-nav">
-      <li>
-        <a href="{% url 'hospital_home'%}">Home</a>
-      </li>
+    <div class="main-menu-wrapper">
+      <div class="menu-header">
+        <a href="" class="menu-logo">
+          <img
+            src="{% static 'HealthStack-System/images/Normal/logo.jpg' %}"
+            class="img-fluid"
+            alt="Logo"
+            style="max-height: 40px;"
+          />
+        </a>
+        <a id="menu_close" class="menu-close" href="javascript:void(0);">
+          <i class="fas fa-times"></i>
+        </a>
+      </div>
+      <ul class="main-nav">
+        <li class="hs-mr-md">
+          <a href="{% url 'hospital_home'%}" class="nav-link">Home</a>
+        </li>
 
-      <li>
-        <a href="{% url 'patient-dashboard' %}">Dashboard</a>
-      </li>
+        <li class="hs-mr-md">
+          <a href="{% url 'patient-dashboard' %}" class="nav-link">Dashboard</a>
+        </li>
 
-      <li class="has-submenu">
-        <a href="#">Hospital <i class="fas fa-chevron-down"></i></a>
-        <ul class="submenu">
-          <li><a href="{% url 'multiple-hospital' %}">Hospital Info</a></li>
-          <li><a href="{% url 'search' %}">Search Doctor</a></li>
-          
-          <!-- <li><a href="#">Checkout</a></li> -->
-          <!-- <li>
-            <a href="">Booking Success</a>
-          </li> -->
-          
-          <!-- <li><a href="#">Favourites</a></li> -->
-          <!-- <li><a href="#">Chat</a></li> -->
-        </ul>
-      </li>
+        <li class="has-submenu hs-mr-md">
+          <a href="#" class="nav-link">Hospital <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="{% url 'multiple-hospital' %}" class="nav-link">Hospital Info</a></li>
+            <li><a href="{% url 'search' %}" class="nav-link">Search Doctor</a></li>
+            
+            <!-- <li><a href="#">Checkout</a></li> -->
+            <!-- <li>
+              <a href="">Booking Success</a>
+            </li> -->
+            
+            <!-- <li><a href="#">Favourites</a></li> -->
+            <!-- <li><a href="#">Chat</a></li> -->
+          </ul>
+        </li>
 
-      {% if user.is_authenticated and user.is_patient %}
-      <li>
-        <a href="{% url 'chat-home' pk=user.id %}">Chat with Doctor</a>
-      </li>
-      {% endif %}
+        {% if user.is_authenticated and user.is_patient %}
+        <li class="hs-mr-md">
+          <a href="{% url 'chat-home' pk=user.id %}" class="nav-link">Chat with Doctor</a>
+        </li>
+        {% endif %}
 
-      <li>
-        <a href="{% url 'pharmacy_shop' %}">Medical Shop</a>
-      </li>
-      <!-- <li class="has-submenu">
+        <li class="hs-mr-md">
+          <a href="{% url 'pharmacy_shop' %}" class="nav-link">Medical Shop</a>
+        </li>
+        <!-- <li class="has-submenu">
                   <a href="#">Pages <i class="fas fa-chevron-down"></i></a>
                   <ul class="submenu">
                     <li><a href="voice-call.html">Voice Call</a></li>
@@ -87,8 +91,8 @@
                 </li> -->
     </ul>
   </div>
-  <ul class="nav header-navbar-rht">
-    <li class="nav-item contact-item">
+  <ul class="nav header-navbar-rht ms-auto d-flex align-items-center">
+    <li class="nav-item contact-item hs-mr-md">
       <div class="header-contact-img">
         <i class="far fa-hospital"></i>
       </div>
@@ -109,7 +113,7 @@
           />
         </span>
       </a>
-      <div class="dropdown-menu dropdown-menu-right">
+      <div class="dropdown-menu dropdown-menu-right glass-strong hs-radius-md">
         <div class="user-header">
           <div class="avatar avatar-sm">
             <img
@@ -129,7 +133,7 @@
         <a class="dropdown-item" href="{% url 'profile-settings' %}"
           >Profile Settings</a
         >
-        <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+        <a class="dropdown-item btn-hs btn-hs-destructive" href="{% url 'logout' %}">Logout</a>
       </div>
     </li>
     <!-- /User Menu -->

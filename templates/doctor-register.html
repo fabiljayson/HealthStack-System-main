@@ -38,6 +38,8 @@
       rel="stylesheet"
       href="{% static 'HealthStack-System/css/Normal/style.css' %}"
     />
+    <!-- Design System -->
+    <link rel="stylesheet" href="{% static 'css/design-system.css' %}">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -78,7 +80,7 @@
                     </div>
 
                     <!-- Register Form -->
-                    <form action="{% url 'doctor-register' %}" method="POST">
+                    <form action="{% url 'doctor-register' %}" method="POST" class="glass-strong hs-p-xl hs-radius-lg hs-mb-lg">
                       {% csrf_token %} 
                       
                       {% include 'message.html' %}
@@ -92,24 +94,24 @@
                       
                       
                       {% for field in form %}
-                      <div class="form-group form-focus">
+                      <div class="form-hs-group form-focus">
                         {{field}}{{ field.errors }}
-                        <label class="focus-label">{{ field.label }}</label>
+                        <label class="form-hs-label focus-label">{{ field.label }}</label>
                       </div>
                       {% endfor %}
 
                       <div class="text-right">
-                        <a class="forgot-link" href="{% url 'doctor-login'%}"
+                        <a class="forgot-link text-primary" href="{% url 'doctor-login'%}"
                           >Already have an account?</a
                         >
                       </div>
                       <button
-                        class="btn btn-primary btn-block btn-lg login-btn"
+                        class="btn btn-hs btn-hs-primary btn-lg login-btn hs-w-100 hs-mt-md"
                         type="submit"
                       >
                         Signup
                       </button>
-                     
+                    
                       
                     </form>
                     <!-- /Register Form -->

@@ -1,6 +1,5 @@
 {% load static %}
-
-<div class="profile-sidebar">
+<div class="profile-sidebar card-hs glass hs-p-lg">
   <div class="widget-profile pro-widget-content">
     <div class="profile-info-widget">
       <a href="#" class="booking-doc-img">
@@ -19,55 +18,56 @@
     </div>
   </div>
   <div class="dashboard-widget">
-    <nav class="dashboard-menu sidebar">
+    <nav class="dashboard-menu sidebar glass-compact hs-mt-lg">
       <ul>
-        <li class="active">
-          <a href="{% url 'doctor-dashboard' %}">
+        <li class="active hs-mb-sm">
+          <a href="{% url 'doctor-dashboard' %}" class="nav-link">
             <i class="fas fa-columns"></i>
             <span>Dashboard</span>
           </a>
         </li>
 
-        <li>
-        <a href="{% url 'doctor-profile' pk=doctor.doctor_id %}">
+        <li class="hs-mb-sm">
+        <a href="{% url 'doctor-profile' pk=doctor.doctor_id %}" class="nav-link">
           <i class="fas fa-user"></i>
           <span>Profile</span>
         </a>
       </li>
 
 
-        <li>
-          <a href="{% url 'appointments'%}">
+
+        <li class="hs-mb-sm">
+          <a href="{% url 'appointments'%}" class="nav-link">
             <i class="fas fa-user-circle"></i>
             <span>Appoinment</span>
           </a>
         </li>
-        <li class="nav-item has-submenu">
+        <li class="nav-item has-submenu hs-mb-sm">
           
             <a href="#" class="nav-link"><i class="fas fa-search"></i><span>Patient ID</span></a>
               <ul class="submenu collapse" style="padding:19px">
                   <!-- <li><a class="nav-link" href="#">Search</a></li> -->
                   <form action="{% url 'patient-search' pk=doctor.doctor_id%}"   method="GET"> 
-                  <input type="text" class="form-control" placeholder="search" name="search_query" value="{{search_query}}">
+                  <input type="text" class="form-hs-control" placeholder="search" name="search_query" value="{{search_query}}">
                   </form>
                 </ul>
           
         </li>
         
-        <li>
-          <a href="{% url 'multiple-hospital' %}">
+        <li class="hs-mb-sm">
+          <a href="{% url 'multiple-hospital' %}" class="nav-link">
             <i class="fas fa-hospital"></i>
             <span>Multiple Hospital</span>
           </a>
       </li>
-        <li>
-          <a href="{% url 'my-patients' %}">
+        <li class="hs-mb-sm">
+          <a href="{% url 'my-patients' %}" class="nav-link">
             <i class="fas fa-user-injured"></i>
             <span>My Patients</span>
           </a>
         </li>
-        <li>
-          <a href="{% url 'doctor-test-list'%}" target="_blank">
+        <li class="hs-mb-sm">
+          <a href="{% url 'doctor-test-list'%}" target="_blank" class="nav-link">
             <i class="fas fa-hourglass-start"></i>
             <span>Test Information</span>
           </a>
@@ -91,9 +91,10 @@
             <small class="unread-msg">23</small>
           </a>
         </li> -->
-        <li>
+        <li class="hs-mb-sm">
           <a
             href="{% url 'doctor-profile-settings' %}"
+            class="nav-link"
           >
             <i class="fas fa-user-cog"></i>
             <span>Profile Settings</span>
@@ -105,16 +106,15 @@
             <span>Social Media</span>
           </a>
         </li> -->
-        <li>
-          <a href="{% url 'doctor-change-password' pk=user.id%}">
+        <li class="hs-mb-sm">
+          <a href="{% url 'doctor-change-password' pk=user.id%}" class="nav-link">
             <i class="fas fa-lock"></i>
             <span>Change Password</span>
           </a>
         </li>
         <li>
-          <a href="{% url 'doctor-logout'%}">
-            <i class="fas fa-sign-out-alt"></i>
-            <span>Logout</span>
+          <a href="{% url 'doctor-logout'%}" class="nav-link btn-hs btn-hs-destructive hs-w-100">
+            <i class="fas fa-sign-out-alt"></i> <span>Logout</span>
           </a>
         </li>
       </ul>

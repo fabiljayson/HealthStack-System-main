@@ -1,6 +1,6 @@
 {% load static %}
 
-    <div class="profile-sidebar">
+    <div class="profile-sidebar card-hs glass hs-p-lg">
       <div class="widget-profile pro-widget-content">
         <div class="profile-info-widget">
           <a href="#" class="booking-doc-img">
@@ -24,23 +24,23 @@
         </div>
       </div>
       <div class="dashboard-widget">
-        <nav class="dashboard-menu sidebar">
+        <nav class="dashboard-menu sidebar glass-compact hs-mt-lg">
           <ul>
-            <li class="active">
-              <a href="{% url 'patient-dashboard' %}">
+            <li class="active hs-mb-sm">
+              <a href="{% url 'patient-dashboard' %}" class="nav-link">
                 <i class="fas fa-columns"></i>
                 <span>Dashboard</span>
               </a>
             </li>
 
-            <li class="nav-item has-submenu">
-              <a href="{% url 'search' %}">
+            <li class="nav-item has-submenu hs-mb-sm">
+              <a href="{% url 'search' %}" class="nav-link">
                 <i class="fas fa-user-md"></i>
                 <span>Search Doctor</span>
               </a>
             </li>
             
-            <li class="has-submenu">
+            <li class="has-submenu hs-mb-sm">
               <a href="{% url 'pharmacy_shop' %}" class="nav-link">
                 <i class="fas fa-capsules"></i>
                 <span>Medical Shop</span>
@@ -48,36 +48,35 @@
 
             </li>
             
-            <li>
-                <a href="{% url 'multiple-hospital' %}">
+            <li class="hs-mb-sm">
+                <a href="{% url 'multiple-hospital' %}" class="nav-link">
                   <i class="fas fa-hospital"></i>
                   <span>Multiple Hospital</span>
                 </a>
             </li>
 
-            <li>
-              <a href="{% url 'doctor-test-list'%}" target="_blank">
+            <li class="hs-mb-sm">
+              <a href="{% url 'doctor-test-list'%}" target="_blank" class="nav-link">
                 <i class="fas fa-hourglass-start"></i>
                 <span>Test Information</span>
               </a>
             </li>
         
-            <li>            
-              <a href="{% url 'profile-settings' %}">
+            <li class="hs-mb-sm">            
+              <a href="{% url 'profile-settings' %}" class="nav-link">
                 <i class="fas fa-user-cog"></i>
                 <span>Profile Settings</span>
               </a>
             </li>
-            <li>
-              <a href="{% url 'change-password' pk=user.id%}">
+            <li class="hs-mb-sm">
+              <a href="{% url 'change-password' pk=user.id%}" class="nav-link">
                 <i class="fas fa-lock"></i>
                 <span>Change Password</span>
               </a>
             </li>
             <li>
-              <a href="{% url 'logout' %}">
-                <i class="fas fa-sign-out-alt"></i>
-                <span>Logout</span>
+              <a href="{% url 'logout' %}" class="nav-link btn-hs btn-hs-destructive hs-w-100">
+                <i class="fas fa-sign-out-alt"></i> <span>Logout</span>
               </a>
             </li>
           </ul>

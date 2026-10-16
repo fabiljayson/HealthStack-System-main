@@ -38,6 +38,8 @@
       rel="stylesheet"
       href="{% static 'HealthStack-System/css/Normal/style.css' %}"
     />
+    <!-- Design System -->
+    <link rel="stylesheet" href="{% static 'css/design-system.css' %}">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -46,41 +48,42 @@
     <![endif]-->
   </head>
   <body>
+    <a href="#main-content" class="hs-skip-link">Skip to main content</a>
     <!-- Main Wrapper -->
-    <div class="main-wrapper">
+    <div class="main-wrapper" id="main-content">
       <!-- Header -->
       <header class="header">{% include 'navbar_home.html' %}</header>
       <!-- header -->
 
       <!-- Home Banner -->
-      <section class="section section-search" style="background-color:rgb(172, 209, 242); padding-bottom: 0px;min-height: 0px;padding-left: 0px;padding-right: 0px;">
-        <div  style="background-color:rgb(172, 209, 242)">
-          <div class="banner-wrapper" style="background-color:rgb(172, 209, 242);padding-bottom: 20px;padding-top: 12px;"> 
-            <div class="banner-header text-center">
-              <h1>Welcome To HealthStack</h1>
-              <p>
-                Choose well by choosing us.
-              </p>
-            </div>
+      <section class="section section-search bg-gradient hs-pt-section hs-pb-section" style="min-height: 0px;padding-left: 0px;padding-right: 0px;">
+        <div class="banner-wrapper hs-p-lg"> 
+          <div class="banner-header text-center">
+            <h1 class="hs-mb-lg">Welcome To HealthStack</h1>
+            <p class="hs-mb-xl">
+              Choose well by choosing us.
+            </p>
+            <a href="{% url 'search' %}" class="btn-hs btn-hs-primary">Find a Doctor</a>
+          </div>
 
-           
-            <!-- /Search -->
-          </div>
-          <div class="home-image">
-            <img
-              src="{% static 'C:\Users\Bless\Desktop\BLESS\HealthStack-System-main\static\HealthStack-System\images\Normal\p2.jpg' %}"
-              class="img-fluid" style="width: 100%;"
-            />
-          </div>
+          <!-- /Search -->
+        </div>
+        <div class="home-image hs-mt-xl">
+          <img
+            src="{% static 'HealthStack-System/images/Normal/p2.jpg' %}"
+            class="img-fluid glass-hero"
+            alt="HealthStack"
+            style="width: 100%;"
+          />
         </div>
       </section>
       <!-- /Home Banner -->
 
       <!-- Clinic and Specialities -->
-      <section class="section section-specialities" style="padding-top: 80px">
+      <section class="section section-specialities bg-surface hs-pt-section hs-pb-section">
         <div class="container-fluid">
-          <div class="section-header text-center">
-            <h2>Clinic and Specialities</h2>
+          <div class="section-header text-center hs-mb-xl">
+            <h2 class="hs-mb-md">Clinic and Specialities</h2>
             <p class="sub-title">
             </p>
           </div>
@@ -90,7 +93,7 @@
               <div class="specialities-slider slider">
                 <!-- Slider Item -->
                 <div class="speicality-item text-center">
-                  <div class="speicality-img">
+                  <div class="speicality-img card-hs glass">
                     <img
                       src="{% static 'HealthStack-System/images/Normal/specialities/specialities-01.png' %}"
                       class="img-fluid"
@@ -104,7 +107,7 @@
 
                 <!-- Slider Item -->
                 <div class="speicality-item text-center">
-                  <div class="speicality-img">
+                  <div class="speicality-img card-hs glass">
                     <img
                       src="{% static 'HealthStack-System/images/Normal/specialities/specialities-02.png' %}"
                       class="img-fluid"
@@ -118,7 +121,7 @@
 
                 <!-- Slider Item -->
                 <div class="speicality-item text-center">
-                  <div class="speicality-img">
+                  <div class="speicality-img card-hs glass">
                     <img
                       src="{% static 'HealthStack-System/images/Normal/specialities/specialities-03.png' %}"
                       class="img-fluid"
@@ -132,7 +135,7 @@
 
                 <!-- Slider Item -->
                 <div class="speicality-item text-center">
-                  <div class="speicality-img">
+                  <div class="speicality-img card-hs glass">
                     <img
                       src="{% static 'HealthStack-System/images/Normal/specialities/specialities-04.png' %}"
                       class="img-fluid"
@@ -146,7 +149,7 @@
 
                 <!-- Slider Item -->
                 <div class="speicality-item text-center">
-                  <div class="speicality-img">
+                  <div class="speicality-img card-hs glass">
                     <img
                       src="{% static 'HealthStack-System/images/Normal/specialities/specialities-05.png' %}"
                       class="img-fluid"
@@ -166,25 +169,18 @@
       <!-- Clinic and Specialities -->
 
       <!-- Popular Section -->
-      <section class="section section-doctor">
+      <section class="section section-doctor bg-surface hs-pt-section hs-pb-section">
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-4">
-              <div class="section-header">
-                <h2>Book Our Doctor</h2>
+              <div class="section-header hs-mb-lg">
+                <h2 class="hs-mb-md">Book Our Doctor</h2>
                 <p>From the Best</p>
               </div>
               <div class="about-content">
                 <p>
                   You can book doctors from any hospital from here.
                 </p>
-                <!-- <p>
-                  web page editors now use Lorem Ipsum as their default model
-                  text, and a search for 'lorem ipsum' will uncover many web
-                  sites still in their infancy. Various versions have evolved
-                  over the years, sometimes
-                </p> -->
-                <!-- <a href="javascript:;">Read More..</a> -->
               </div>
             </div>
 
@@ -194,7 +190,7 @@
 
                 {% for doctor in doctors %}
                 <!-- Doctor Widget -->
-                <div class="profile-widget">
+                <div class="profile-widget card-hs glass hs-mb-lg">
                   <div class="doc-img">
                     <a href="#">
                       <img
@@ -207,8 +203,8 @@
                       <i class="far fa-bookmark"></i>
                     </a>
                   </div>
-                  <div class="pro-content">
-                    <h3 class="title">
+                  <div class="pro-content card-hs-body">
+                    <h3 class="title card-hs-title">
                       <a href="doctor-profile.html">{{doctor.name}}</a>
                       <i class="fas fa-check-circle verified"></i>
                     </h3>
@@ -246,7 +242,7 @@
                 {% endfor %}
 
 
-               
+              
               </div>
             </div>
 
@@ -256,19 +252,19 @@
       <!-- /Popular Section -->
 
       <!-- Availabe Features -->
-      <section class="section section-features">
+      <section class="section section-features bg-surface hs-pt-section hs-pb-section">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-5 features-img">
               <img
-                src="{% static 'C:\Users\Bless\Desktop\BLESS\HealthStack-System-main\static\HealthStack-System\images\Normal\pppp.jpg' %}"
-                class="img-fluid"
+                src="{% static 'HealthStack-System/images/Normal/pppp.jpg' %}"
+                class="img-fluid glass-hero"
                 alt="Feature"
               />
             </div>
             <div class="col-md-7">
-              <div class="section-header">
-                <h2 class="mt-2">Available Hospitals</h2>
+              <div class="section-header hs-mb-lg">
+                <h2 class="hs-mb-md">Available Hospitals</h2>
                 <p>
                   Here You can access multiple hospitals. You can book your appointment from
                   your doctor & can collect all hospital infromations from here.
@@ -278,17 +274,19 @@
                 <!-- Slider Item -->
                 {% for hospital in hospitals %}
                 <div class="feature-item text-center">
-                  <img
-                    src="{{ hospital.featured_image.url }}"
-                    class="img-fluid"
-                    alt="Feature"
-                  />
-                  <p>{{hospital.name}}</p>
+                  <div class="card-hs glass hs-p-md">
+                    <img
+                      src="{{ hospital.featured_image.url }}"
+                      class="img-fluid"
+                      alt="Feature"
+                    />
+                    <p>{{hospital.name}}</p>
+                  </div>
                 </div>
                 {% endfor %}
                 <!-- /Slider Item -->
-
                 
+              
               </div>
             </div>
           </div>
