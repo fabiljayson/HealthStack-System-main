@@ -1,5 +1,7 @@
 # HealthStack-System
 
+> **Status: archived (completed course project).** Delivered June 2025 as a Software Engineering course project (B.Sc. CSE). Kept public as a portfolio/reference — no active development. See the live demo walkthrough in the YouTube video below.
+
 - An online platform that caters to multiple hospitals, enabling efficient tracking, monitoring, and sharing of patient health records between themselves. Patients can access information on various hospitals and doctors, book appointments online, purchase medicines from an online pharmacy, pay for laboratory tests via an integrated payment gateway, and even chat with their appointed doctors.
 - Software Engineering Project - B.Sc. in Computer Science and Engineering (CSE)
 
@@ -79,8 +81,8 @@
             python -m venv venv
       2) Activate the virtual environment venv
             source venv/bin/activate
-      3) Install python pip paclages
-            pip install -r requirements
+      3) Install python pip packages
+            pip install -r requirements.txt
       4) Create .env from  .env.example and add secret key
             cp .env.example .env
       5) Upgrade django framework
